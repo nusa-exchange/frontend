@@ -1,0 +1,79 @@
+.ant-layout-header {
+  display: flex;
+  align-items: center;
+  min-width: 1200px;
+  padding: 0 10px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  background: #131e33;
+  color: var(--header-text-color);
+
+  &:not(.no-border) {
+    border-bottom: 1px solid rgba(49, 58, 86, 0.5);
+  }
+
+  .logo {
+    cursor: pointer;
+
+    img {
+      height: 40px;
+      width: 48px;
+    }
+  }
+
+  .action-group {
+    display: flex;
+
+    > * {
+      margin: 0 10px;
+    }
+
+    &.left {
+      margin-left: 15px;
+    }
+
+    &.right {
+      margin-left: auto;
+    }
+
+    a {
+      color: var(--header-text-color);
+    }
+
+    [class^="auth"] > * {
+      display: inline-block;
+      margin: 0 10px;
+      line-height: 48px;
+    }
+
+    [class*="auth"] > * {
+      margin: 0 10px;
+    }
+
+    button {
+      font-size: 12px;
+    }
+  }
+
+  a:hover {
+    color: #fff;
+  }
+}
+
+.ant-dropdown-menu.dropdown-user {
+  min-width: 200px;
+
+  li.information {
+    line-height: 1;
+    height: 100%;
+    margin: 0 auto;
+    width: 85%;
+    padding: 15px 0;
+    border-bottom: 1px solid #374262;
+    margin-bottom: 10px;
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+}

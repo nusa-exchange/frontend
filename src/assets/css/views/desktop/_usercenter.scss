@@ -1,0 +1,111 @@
+.page-user {
+  .container {
+    display: flex;
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+  .setting-menu {
+    width: 260px;
+    border-radius: 2px;
+    background: var(--bg-card-color);
+    display: block;
+    padding-bottom: 40px;
+    li {
+      &.avatar-user {
+        text-align: center;
+        padding: 30px 0;
+        .uid {
+          color: #c1c9d4;
+          font-size: 14px;
+          padding-top: 10px;
+          padding-bottom: 8px;
+        }
+        .email {
+          width: 200px;
+          padding: 0 10px;
+          height: 35px;
+          line-height: 35px;
+          background: $bg-downdown-border-color;
+          color: #fff;
+          margin: 0 auto;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 16px;
+          border-radius: 4px;
+        }
+      }
+      &.pick {
+        font-size: 16px;
+        text-align: left;
+        padding-left: 55px;
+        align-items: center;
+        justify-content: left;
+        height: 60px;
+        line-height: 60px;
+        cursor: pointer;
+        position: relative;
+        border-left: 4px solid transparent;
+        border-top: 1px solid var(--border-color);
+        i {
+          position: absolute;
+          left: 25px;
+          font-size: 18px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &.selected {
+          border-left-color: $user-border-selected-color;
+          background-color: rgba(0, 0, 0, 0.15);
+        }
+        &:last-child {
+          border-bottom: 1px solid var(--border-color);
+        }
+      }
+    }
+  }
+  .setting-main {
+    width: calc(100% - 260px);
+    margin-left: 20px;
+    border-radius: 2px;
+    background: var(--bg-card-color);
+    min-height: calc(100vh - 254px - 48px - 40px - 108px);
+    font-size: 14px;
+    padding: 20px;
+    .setting-head {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      position: relative;
+      font-size: 18px;
+      height: 48px;
+      span {
+        float: left;
+      }
+      button {
+        float: right;
+        padding: 4px 10px;
+        font-size: 14px;
+        color: var(--blue-color);
+        border: 1px solid var(--blue-color);
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+    .setting-body {
+      position: relative;
+      min-height: 800px;
+      tr td {
+        border-bottom: 1px solid var(--border-color);
+        &.desc {
+          color: $footer-text-color;
+        }
+      }
+      .ant-pagination {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

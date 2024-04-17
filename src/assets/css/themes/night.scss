@@ -1,0 +1,77 @@
+.night {
+  dt {
+    color: var(--color-gray);
+  }
+  .ant-layout-header {
+    background: var(--bg-card-color);
+  }
+  .page-exchange {
+    .ticker-info {
+      background: var(--bg-card-color);
+      .ticker-status {
+        color: var(--color-gray);
+      }
+      .market-list {
+        &.selected,
+        &:hover {
+          background-color: $selected-bg-color;
+        }
+        .ticker-name {
+          color: $value-color;
+          i {
+            color: $icon-color;
+            background-color: $selected-bg-color;
+          }
+        }
+        #market_list {
+          border-color: var(--border-color);
+          .sorter {
+            i {
+              color: $sort-color;
+              &.active {
+                color: $icon-color;
+              }
+            }
+          }
+          .name {
+            color: $value-color;
+          }
+          p.selected,
+          p:hover {
+            background-color: $row-hover-bg-color;
+          }
+          .input-box {
+            border-color: var(--border-color);
+            input {
+              background-color: var(--bg-card-color);
+            }
+            i {
+              color: var(--color-gray);
+            }
+            ::-webkit-input-placeholder {
+              color: $input-placeholder-color;
+            }
+          }
+        }
+      }
+      .high,
+      .low,
+      .amount,
+      .volume {
+        .value {
+          color: $value-color;
+        }
+      }
+    }
+  }
+  .switch {
+    border-color: var(--border-color);
+    button {
+      color: var(--color-gray);
+      &.selected {
+        background-color: $selected-bg-color;
+        color: $selected-color !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.page-exchange-m {
+  .body-bar {
+    .group-top {
+      margin-top: 8px;
+      display: flex;
+      padding: 0 12px;
+      .group-top-left {
+        width: 55%;
+        margin-right: 4px;
+      }
+      .group-top-right {
+        width: 45%;
+        margin-left: 4px;
+      }
+
+      .orderbook {
+        font-size: 10px;
+
+        .ticker-status {
+          padding: 4px 6px;
+          display: flex;
+          margin: 4px 0;
+          background-color: var(--bg-card-color);
+          border-radius: 2px;
+          line-height: 1;
+
+          .last {
+            flex: 1;
+            position: relative;
+            :not(.fiat) {
+              font-weight: bold;
+            }
+            .fiat {
+              font-size: 7px;
+              color: var(--color-gray);
+              margin-top: 2px;
+            }
+          }
+          .change {
+            font-weight: bold;
+            margin: auto 0;
+          }
+        }
+      }
+    }
+
+    .group-bottom {
+      margin-top: 8px;
+    }
+  }
+
+  &-orders {
+    &-head {
+      height: 35px;
+      line-height: 35px;
+      padding: 0 12px;
+      border-bottom: 1px solid var(--border-color);
+
+      &-title, &-action {
+        display: inline-block;
+      }
+
+      &-action {
+        font-size: 10px;
+        float: right;
+        cursor: pointer;
+        color: var(--color-gray);
+      }
+    }
+
+    .pairs-choose {
+      padding: 4px 0;
+      border-bottom: 1px solid var(--border-color);
+
+      i {
+        color: var(--color-gray);
+        vertical-align: middle;
+        line-height: 1;
+        margin-right: 2px;
+        font-size: 12px;
+      }
+
+      &-hide {
+        i {
+          color: var(--blue-color);
+        }
+      }
+    }
+
+    &-content {
+      overflow-y: auto;
+      scrollbar-width: none;
+      padding: 0 12px;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+    }
+  }
+}

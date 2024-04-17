@@ -1,0 +1,23 @@
+.history {
+  .setting-body {
+    padding-bottom: 24px;
+    th {
+      font-weight: normal;
+      color: var(--color-gray);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .history-row {
+      td {
+        padding: 8px 0;
+      }
+    }
+    .table-content {
+      position: relative;
+      padding-bottom: 12px;
+      i {
+        vertical-align: middle;
+      }
+    }
+  }
+}

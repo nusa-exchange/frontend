@@ -1,0 +1,158 @@
+@import "./cube-ui/index";
+
+.mobile-view {
+  overflow: hidden;
+  user-select: none;
+
+  ::-webkit-scrollbar,
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  ::-webkit-scrollbar-track-piece,
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-track,
+  &:-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+  }
+
+  ::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb {
+    height: 0;
+    background-color: var(--bg-downdown-border-color);
+    border-radius: 0;
+  }
+
+  .ant-layout {
+    max-height: 100vh;
+    font-size: 10px;
+
+    > * {
+      &:first-child {
+        margin-bottom: 50px;
+      }
+    }
+
+    .body-bar {
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+    }
+  }
+
+  input {
+    border: none;
+    font-weight: 500;
+
+    &::placeholder {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--input-placeholder-color);
+    }
+  }
+
+  .ant-notification {
+    width: auto;
+    bottom: 55px !important;
+    margin: 0;
+
+    &-notice {
+      padding: 0;
+      margin-bottom: 8px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+
+      &-content {
+        width: calc(100vw - 32px);
+        text-align: center;
+      }
+
+      &-message {
+        max-width: 100%;
+        word-break: break-word;
+        text-align: left;
+        font-size: 12px;
+
+        padding: 2px 8px;
+        background-color: rgba(255, 255, 255, 0.075);
+        border-radius: 4px;
+      }
+
+      &-close {
+        display: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .ant-empty {
+    &-image {
+      height: 75px;
+    }
+
+    &-description {
+      font-size: 10px;
+      line-height: 1;
+      color: var(--color-gray);
+      font-weight: 500;
+    }
+  }
+}
+
+.cube-pulldown-wrapper {
+  color: var(--color-gray);
+
+  .before-trigger {
+    font-size: 30px;
+    line-height: 30px;
+    align-self: flex-end;
+    text-align: center;
+
+    p {
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .after-trigger {
+      .refresh-text {
+        color: grey;
+      }
+    }
+  }
+
+  .anticon {
+    color: var(--blue-color);
+    font-size: 30px;
+  }
+}
+
+.cube-pullup-wrapper {
+  color: var(--color-gray);
+
+  .loading {
+    display: flex;
+
+    i {
+      color: var(--blue-color);
+      font-size: 16px;
+      margin-right: 6px;
+    }
+  }
+}

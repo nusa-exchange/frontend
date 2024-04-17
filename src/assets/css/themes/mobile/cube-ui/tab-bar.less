@@ -1,0 +1,39 @@
+@import "~ant-design-vue/es/style/themes/index";
+@import "~ant-design-vue/es/style/mixins/index";
+
+@tab-prefix-cls: ~"cube-tab";
+@tab-bar-prefix-cls: ~"@{tab-prefix-cls}-bar";
+
+.@{tab-prefix-cls} {
+  flex: 1;
+  padding: 7px 0;
+  color: @text-color-secondary;
+  text-align: center;
+
+  &_active {
+    color: @link-color;
+  }  
+}
+
+.@{tab-bar-prefix-cls} {
+  position: relative;
+  align-items: center;
+
+  &, &_inline .cube-tab {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_inline .cube-tab {
+    align-content: center;
+  }
+
+  &-slider {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 20px;
+    background-color: @link-color;
+  }
+}

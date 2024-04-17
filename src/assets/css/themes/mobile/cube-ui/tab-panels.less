@@ -1,0 +1,17 @@
+@tab-panels-prefix-cls: ~"cube-tab-panels";
+@tab-panel-prefix-cls: ~"cube-tab-panel";
+
+.@{tab-panels-prefix-cls} {
+  position: relative;
+  overflow: hidden;
+
+  &-group {
+    display: flex;
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+}
+
+.@{tab-panel-prefix-cls} {
+  width: 100%;
+  flex: 1 0 auto;
+}

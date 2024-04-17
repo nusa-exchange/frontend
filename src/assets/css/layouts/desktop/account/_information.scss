@@ -1,0 +1,15 @@
+.information .setting-body {
+  .row {
+    td {
+        padding: 20px 0;
+    }
+    .name {
+      text-align: left;
+      width: 100px;
+    }
+    .value, .action {
+      text-align: right;
+      width: 125px;
+    }
+  }
+}

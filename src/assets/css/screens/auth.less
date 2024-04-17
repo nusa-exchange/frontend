@@ -1,0 +1,65 @@
+.screen-auth, .screen-verify {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: var(--bg-card-color);
+
+  &-box {
+    margin: 0 20px;
+  }
+
+  .z-auth-input {
+    margin-bottom: 12px;
+  }
+
+  .z-auth-button {
+    margin: 12px 0;
+  }
+
+  &-title {
+    position: relative;
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 24px 0;
+    padding-left: 12px;
+    color: var(--color-gray);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      height: 80%;
+      width: 4px;
+      background-color: var(--color-gray);
+    }
+  }
+
+  &-logo {
+    height: 125px;
+    background-image: url("~@/assets/img/logo.png");
+    background-repeat: no-repeat;
+    background-size: 125px;
+    background-position: center;
+    margin-bottom: 24px;
+  }
+
+  &-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-item {
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--color-gray);
+
+      a {
+        color: var(--blue-color);
+      }
+    }
+  }
+}

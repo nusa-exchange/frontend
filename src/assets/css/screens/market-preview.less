@@ -1,0 +1,259 @@
+.market-preview {
+
+  .head-bar {
+    background-color: transparent;
+    border-radius: 8px 8px 0px 0px;
+
+    .center-action {
+      i {
+        color: inherit;
+      }
+    }
+  }
+
+  .body-bar {
+    height: calc(100% - 75px);
+    overflow: auto;
+  
+    .ticker-status {
+      display: flex;
+      padding: 0 12px;
+
+      &-panel {
+        flex: 1;
+        display: inline-block;
+      }
+
+      &-last-price {
+        font-size: 18px;
+        font-weight: bold;
+
+        &-fiat {
+          color: var(--info-color);
+        }
+      }
+
+      &-row {
+        width: auto;
+        display: inline-block;
+        margin: 0 4px;
+        text-align: left;
+      }
+
+      &-roi {
+        &-title {
+          font-size: 8px;
+          color: var(--info-color);
+        }
+
+        &-value {
+
+        }
+      }
+    }
+
+    .group-chart {
+      position: relative;
+      height: calc(50% + 35px);
+      margin-top: 6px;
+      .head-bar {
+        height: 35px;
+        position: relative;
+        font-size: 14px;
+        line-height: 35px;
+        background-color: var(--bg-card-head-color);
+
+        .chart-picker {
+          position: relative;
+          display: flex;
+          justify-content: left;
+
+          > .picker {
+            padding: 0;
+            flex: 0;
+            text-align: left;
+            cursor: pointer;
+            .text {
+              padding: 0 10px;
+              display: flex;
+            }
+          }
+          .time-picker {
+            .selected {
+              color: var(--blue-color);
+            }
+            i {
+              margin-left: 6px;
+              font-size: 10px;
+              color: var(--blue-color);
+              line-height: inherit;
+            }
+            .active i {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+      .charts {
+        position: relative;
+        height: calc(100% - 35px);
+      }
+
+      .kline-chart,
+      .depth-chart {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-card-color);
+        z-index: 0;
+
+        &.showing {
+          z-index: 1;
+        }
+      }
+    }
+    .group-trade {
+      font-size: 14px;
+      //margin-top: 16px;
+      position: relative;
+      .head-bar {
+        background-color: var(--bg-card-head-color);
+        height: 35px;
+        position: relative;
+        display: flex;
+        justify-content: left;
+        > .picker {
+          line-height: 35px;
+          flex: none;
+          text-align: left;
+          padding: 0 10px;
+        }
+      }
+
+      .trades {
+        display: flex;
+        padding: 0 10px;
+      }
+
+      .orderbook {
+        &-head {
+          display: flex;
+          padding: 6px 5px;
+
+          span {
+            flex: 1;
+            font-size: 8px;
+            color: var(--color-gray);
+          }
+        }
+
+        &-content {
+          display: flex;
+        }
+
+        .z-table {
+          &-content {
+            height: 100%;
+          }
+
+          &-row {
+            padding: 0 5px;
+          }
+        }
+
+        .bids {
+          .depth-row {
+            background-position: right center !important;
+          }
+        }
+      }
+
+      .z-table {
+        &-head, &-row {
+          padding: 0;
+        }
+      }
+
+      .length {
+        flex: 0.2 !important;
+        color: var(--color-gray);
+        font-size: 8px;
+      }
+    }
+  }
+
+  .z-table {
+    width: 100%;
+
+    &-head, &-row {
+      font-size: 10px;
+      font-weight: normal;
+    }
+
+    &-head {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    &-content {
+      height: calc(100% - 30px);
+    }
+
+    &-row {
+      height: 20px;
+      line-height: 20px;
+      border-bottom: 0;
+    }
+  }
+
+  .tab-bar {
+    background-color: var(--bg-head-color);
+    position: fixed;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    bottom: 0;
+    padding: 6px;
+
+    > button {
+      display: inline-block;
+      flex: 1;
+      text-align: center;
+      font-size: 12px;
+      height: 100%;
+      vertical-align: middle;
+      border-radius: 4px;
+      margin: 0 6px;
+
+      &:first-child {
+        float: left;
+      }
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+}
+
+.ant-dropdown-kline {
+  left: 10px !important;
+  right: 10px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  .ant-dropdown-menu {
+    color: var(--text-default-color);
+    display: table;
+    box-shadow: none;
+    width: 100%;
+    .ant-dropdown-menu-item {
+      float: left;
+      margin: 0;
+      clear: none;
+      width: 20%;
+      padding: 0;
+      text-align: center;
+      font-size: 12px !important;
+    }
+  }
+}

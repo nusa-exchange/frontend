@@ -1,0 +1,17 @@
+.orderbook {
+  .asks .depth-row {
+    background-image: linear-gradient(
+      var(--down-bg-color),
+      var(--down-bg-color)
+    );
+    background-position: left center;
+    background-size: 0 0;
+    background-repeat: no-repeat;
+  }
+  .bids .depth-row {
+    background-image: linear-gradient(var(--up-bg-color), var(--up-bg-color));
+    background-position: left center;
+    background-size: 0 0;
+    background-repeat: no-repeat;
+  }
+}

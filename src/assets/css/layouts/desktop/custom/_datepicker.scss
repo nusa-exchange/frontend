@@ -1,0 +1,42 @@
+.datepicker {
+  .m {
+    display: flex;
+    height: 32px;
+    border: 1px solid #314362;
+    border-radius: 4px;
+    align-items: center;
+    padding: 3px 10px;
+    transition: border 0.2s ease-in-out;
+    position: relative;
+    input {
+      border: 0;
+      padding: 0;
+      text-align: center;
+      &::placeholder {
+        color: $text-default-color;
+      }
+    }
+    span {
+      padding: 0 5px;
+      width: 5%;
+    }
+    i {
+      &:first-child {
+        font-size: 16px;
+        position: absolute;
+        left: 14px;
+        z-index: 1;
+      }
+      &:last-child {
+        font-size: 14px;
+        position: absolute;
+        right: 14px;
+        cursor: pointer;
+        z-index: 1;
+      }
+    }
+    &.selected {
+      border-color: var(--blue-color);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.panel-move {
+  &-enter,
+  &-leave-active {
+    transform: translate(0, 100%);
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: transform 0.3s;
+  }
+}
+
+.panel-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--bg-card-color);
+}

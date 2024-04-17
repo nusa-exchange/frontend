@@ -1,0 +1,160 @@
+@import "~ant-design-vue/es/style/themes/default";
+
+@table-prefix-cls: ~"z-table";
+
+.@{table-prefix-cls} {
+  position: relative;
+  min-height: 100%;
+
+  &-head {
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    line-height: 32px;
+    color: var(--color-gray);
+    > span > span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    height: calc(100% - 32px);
+    overflow-y: auto;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  &-row,
+  &-head {
+    width: 100%;
+    display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
+    user-select: none;
+    span {
+      flex: 1;
+    }
+
+    i {
+      line-height: inherit;
+      font-size: 16px;
+      vertical-align: middle;
+    }
+  }
+
+  &-borderable {
+    .@{table-prefix-cls}-head,
+    .@{table-prefix-cls}-row {
+      border-bottom: @border-width-base @border-style-base @border-color-split;
+    }
+  }
+
+  &-hoverable {
+    .@{table-prefix-cls}-row {
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  &-row {
+    line-height: 32px;
+
+    &-selected {
+      background-color: var(--selected-bg-color);
+    }
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-no-scroll {
+    .@{table-prefix-cls}-head,
+    .@{table-prefix-cls}-content {
+      position: relative;
+    }
+  }
+
+  &-sort {
+    cursor: pointer;
+    
+    &-selected &-column:not(&-reverse) {
+      i:first-child {
+        color: #fff;
+      }
+    }
+
+    &-reverse {
+      i:last-child {
+        color: #fff;
+      }
+    }
+
+    &-column {
+      position: relative;
+      width: 16px;
+      height: 32px;
+      i {
+        position: absolute;
+        left: 50%;
+        transform: translateY(-50%);
+        font-size: 6px;
+        line-height: 1;
+        &:first-child {
+          bottom: 12px;
+        }
+        &:last-child {
+          bottom: 6px;
+        }
+      }
+    }
+  }
+
+  &-loading {
+    .@{table-prefix-cls}-content {
+      overflow: hidden;
+    }
+
+    &-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      min-height: auto;
+      text-align: center;
+      background-color: var(--bg-card-color);
+      i {
+        font-size: 24px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+  }
+
+  &-empty {
+    .@{table-prefix-cls}-content {
+      padding-top: 20px;
+    }
+    .@{table-prefix-cls}-loading {
+      position: relative;
+    }
+  }
+
+  &-pagination {
+    padding-bottom: 20px;
+
+    &-content {
+      margin-top: 12px;
+      text-align: right;
+    }
+  }
+}

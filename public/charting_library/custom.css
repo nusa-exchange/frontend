@@ -1,0 +1,61 @@
+.chart-page .apply-common-tooltip {
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: #728bb9;
+	cursor: pointer;
+}
+
+.loading-indicator {
+	background: #1a243b;
+}
+
+.chart-page [class^="labelRow-"], .chart-page [class^="icon-"] {
+	color: #7482a0 !important;
+}
+
+.chart-page .layout__area--top .apply-common-tooltip {
+	padding: 3px 10px;
+}
+
+.chart-page .actived .apply-common-tooltip {
+	color: #728bb9;
+	background-color: #2e3f5f;
+}
+
+.menuWrap-1gEtmoET, .item-2xPVYue0 {
+	background-color: #25344e;
+	color: #c6d8f3;
+}
+
+.item-2xPVYue0 {
+	cursor: pointer;
+}
+
+.menuWrap-1gEtmoET {
+	box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+}
+
+.item-2xPVYue0.isActive-2j-GhQs_, .item-2xPVYue0.isActive-2j-GhQs_:active {
+	background-color: #2e3f5f;
+}
+
+@media (any-hover: hover), not all {
+	.item-2xPVYue0:hover, .item-2xPVYue0.isActive-2j-GhQs_:hover {
+		background-color: #2e3f5f;
+	}
+}
+
+.container-2BvS3Fpg .inner-3YzQuyJx {
+	background-color: #1a243b;
+}
+
+.chart-page .apply-common-tooltip {
+	border: none;
+}
+
+body {
+	--tv-color-platform-background: transparent;
+	--tv-color-pane-background: transparent;
+	--tv-color-toolbar-button-background-hover: transparent;
+	--tv-color-toolbar-button-background-expanded: #2e3f5f;
+}

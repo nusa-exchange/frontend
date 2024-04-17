@@ -1,0 +1,146 @@
+.page-auth {
+  .auth-box {
+    width: 100%;
+    display: block;
+    padding: 100px 0;
+    margin: 0 auto;
+    > div {
+      background: var(--bg-card-color) url("~@/assets/img/signup.jpg") 0 0
+        no-repeat;
+      border-radius: 6px;
+      padding-left: 376px;
+      padding-top: 50px;
+      width: 900px;
+      height: 600px;
+      margin: 0 auto;
+      position: relative;
+      .title {
+        padding-left: 15px;
+        font-size: 28px;
+        height: 30px;
+        line-height: 30px;
+        background-size: auto 30px;
+        margin-bottom: 0.5em;
+        & {
+          color: #52a7f8;
+          background: linear-gradient(0deg, #52a7f8, #52a7f8);
+          background-size: 5px 30px;
+          background-repeat: no-repeat;
+          background-position: left 0;
+        }
+      }
+      form {
+        width: 450px;
+        margin-top: 25px;
+        .desc {
+          font-size: 14px;
+          margin: 0 auto;
+          line-height: 20px;
+        }
+        .icon-email {
+          margin: 0 auto;
+          margin-top: 25px;
+          text-align: center;
+        }
+        .not-receive-note {
+          margin-top: 25px;
+          color: $header-text-color;
+          h3 {
+            font-size: 14px;
+            font-weight: normal;
+          }
+          li {
+            font-size: 12px;
+            line-height: 20px;
+          }
+          &+div {
+            margin-top: 25px;
+          }
+        }
+        > div {
+          a {
+            color: $selected-blue-color;
+          }
+          .forgot {
+            float: left;
+          }
+          .signup {
+            color: #bacae4;
+          }
+        }
+      }
+    }
+  }
+  .signin-box {
+    width: 100%;
+    display: block;
+    padding: 100px 0;
+    margin: 0 auto;
+    > div {
+      background: var(--bg-card-color) url("~@/assets/img/signin.jpg") 0 0
+        no-repeat;
+      border-radius: 6px;
+      padding-left: 376px;
+      padding-top: 50px;
+      width: 900px;
+      height: 600px;
+      margin: 0 auto;
+      position: relative;
+      .title {
+        padding-left: 15px;
+        font-size: 28px;
+        height: 30px;
+        line-height: 30px;
+        background-size: auto 30px;
+        margin-bottom: 0.5em;
+        & {
+          color: #52a7f8;
+          background: linear-gradient(0deg, #52a7f8, #52a7f8);
+          background-size: 5px 30px;
+          background-repeat: no-repeat;
+          background-position: left 0;
+        }
+      }
+      form {
+        width: 450px;
+        margin-top: 25px;
+        .desc {
+          font-size: 14px;
+          margin: 0 auto;
+          line-height: 20px;
+        }
+        .icon-email {
+          margin: 0 auto;
+          margin-top: 25px;
+          text-align: center;
+        }
+        .not-receive-note {
+          margin-top: 25px;
+          color: $header-text-color;
+          h3 {
+            font-size: 14px;
+            font-weight: normal;
+          }
+          li {
+            font-size: 12px;
+            line-height: 20px;
+          }
+          &+div {
+            margin-top: 25px;
+          }
+        }
+        > div {
+          a {
+            color: $selected-blue-color;
+          }
+          .forgot {
+            float: left;
+          }
+          .signup {
+            color: #bacae4;
+          }
+        }
+      }
+    }
+  }
+}

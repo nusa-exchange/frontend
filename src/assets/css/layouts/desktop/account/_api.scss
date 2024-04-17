@@ -1,0 +1,30 @@
+.api-row {
+  td {
+    padding: 8px 0;
+    > i {
+      margin-left: 20px;
+      font-size: 20px;
+      color: $icon-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.api-modal {
+  .info-warning {
+    text-align: left;
+    color: $warning-color;
+    padding: 20px 8px;
+    text-align: center;
+    > i {
+      font-size: 100px;
+      padding-bottom: 8px;
+    }
+    > p {
+      font-size: 16px;
+      > span {
+        font-weight: bolder;
+      }
+    }
+  }
+}

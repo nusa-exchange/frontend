@@ -1,0 +1,141 @@
+@keyframes Removing {
+  from {
+    width: 100%;
+    line-height: 43px;
+    height: 43px;
+    opacity: 1;
+  }
+  to {
+    width: 0%;
+    line-height: 0px;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+.page-record {
+  .container {
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+  .order-menu {
+    display: flex;
+    height: 60px;
+    > li {
+      font-size: 14px;
+      background: var(--bg-head-color);
+      position: relative;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 19px;
+      margin-right: 20px;
+      padding-left: 20px;
+      width: 140px;
+      cursor: pointer;
+      i {
+        font-size: 18px;
+      }
+      span {
+        margin-left: 8px;
+      }
+      &.selected {
+        background-color: $selected-bg-color;
+        i {
+          color: $icon-color;
+        }
+      }
+    }
+  }
+  .order-main {
+    border-radius: 2px;
+    background: var(--bg-card-color);
+    padding-top: 20px;
+    .order-head {
+      padding-bottom: 20px;
+      position: relative;
+      font-size: 18px;
+      padding: 0 20px;
+    }
+    .order-body {
+      padding-bottom: 20px;
+      .select {
+        display: flex;
+        padding: 0 20px;
+        //////
+        .form-row {
+          width: auto;
+          margin-right: 15px;
+          padding: 10px 0;
+          line-height: 32px;
+          .form-label {
+            margin-right: 10px;
+          }
+          .form-control {
+            input {
+              color: $text-default-color;
+            }
+          }
+        }
+      }
+      .table-content {
+        position: relative;
+        padding-bottom: 10px;
+        dt {
+          line-height: 32px;
+          color: var(--color-gray);
+        }
+        dd {
+          &.empty {
+            height: 400px;
+            p {
+              line-height: 400px;
+              span {
+                text-align: center;
+              }
+            }
+          }
+          p {
+            line-height: 43px;
+            opacity: 1;
+            transition-delay: 0s;
+            overflow: hidden;
+            &[removing] {
+              animation: Removing 0.5s forwards;
+            }
+            span {
+              &.type {
+                text-transform: capitalize;
+              }
+              &.action {
+                > i {
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+        dt,
+        dd > p {
+          padding: 0 20px;
+          border-bottom: 1px solid var(--border-color);
+          span.action {
+            flex: 0 0 106px;
+            i {
+              cursor: pointer;
+              font-size: 24px;
+              color: $blue-dark-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  button {
+    padding: 8px 16px;
+    border-radius: 2px;
+    border: 1px solid $blue-dark-color;
+    background: #1d3863;
+    color: #fff;
+    line-height: 1;
+  }
+}

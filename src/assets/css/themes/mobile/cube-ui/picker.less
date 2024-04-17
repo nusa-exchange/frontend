@@ -1,0 +1,249 @@
+// Color variables (appears count calculates by raw css)
+@color0: #333333; // Appears 2 times
+@color1: #999999; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width0: 100%; // Appears 7 times
+
+// Height variables (appears count calculates by raw css)
+@height2: 100%; // Appears 5 times
+
+@popup-prefix-cls: ~"cube-popup";
+
+.@{popup-prefix-cls} {
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+
+  &_mask {
+    pointer-events: auto;
+  }
+
+  &_mask &-mask {
+    display: block;
+  }
+
+  &-container {
+    height: @height2;
+    position: absolute;
+    transform: translate(100%, 100%);
+    width: @width0;
+  }
+
+  &-mask {
+    background-color: #25262d;
+    display: none;
+    height: @height2;
+    opacity: 0.4;
+    overflow: hidden;
+    pointer-events: auto;
+    position: absolute;
+    width: @width0;
+    &:before {
+      background-color: rgba(0, 0, 0, 0.1);
+      content: ".";
+      display: block;
+      height: 1px;
+      margin-left: -10px;
+      width: 1px;
+    }
+  }
+
+  &-content {
+    box-sizing: border-box;
+    left: 0;
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    transform: translate(-100%, -100%);
+    width: @width0;
+  }
+
+  &-center &-content {
+    left: -50%;
+    max-width: @width0;
+    top: -50%;
+    transform: translate(-50%, -50%);
+    transform: translate(0);
+    width: auto;
+  }
+
+  &-left &-content {
+    height: @height2;
+    left: -100%;
+    left: -50%;
+    max-width: @width0;
+    top: -100%;
+    top: -50%;
+    transform: translate(0);
+    width: auto;
+  }
+
+  &-right &-content {
+    height: @height2;
+    left: -50%;
+    max-width: @width0;
+    right: 100%;
+    top: -100%;
+    top: -100%;
+    top: -50%;
+    transform: translate(0);
+    width: auto;
+  }
+
+  &-top &-content {
+    left: -100%;
+    top: -100%;
+    transform: translate(0);
+  }
+}
+
+.cube-picker-fade-enter {
+  opacity: 0;
+}
+.cube-picker-fade-leave-active {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.cube-picker-fade-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+.cube-picker-panel {
+  background: #ffffff;
+  font-size: 14px;
+  height: 273px;
+  text-align: center;
+}
+.cube-picker-move-enter {
+  transform: translate3d(0, 100%, 0);
+}
+.cube-picker-move-leave-active {
+  transform: translate3d(0, 100%, 0);
+  transition: all 0.3s ease-in-out;
+}
+.cube-picker-move-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+.cube-picker-choose {
+  height: 60px;
+  position: relative;
+}
+.cube-picker-cancel {
+  box-sizing: content-box;
+  color: @color1;
+  font-size: 14px;
+  left: 0;
+  line-height: 60px;
+  padding: 0 16px;
+  position: absolute;
+  &:active {
+    color: #cccccc;
+  }
+}
+.cube-picker-confirm {
+  box-sizing: content-box;
+  color: #fc9153;
+  font-size: 14px;
+  line-height: 60px;
+  padding: 0 16px;
+  position: absolute;
+  right: 0;
+  &:active {
+    color: #fdc2a5;
+  }
+}
+.cube-picker-title-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  height: @height2;
+  justify-content: center;
+  padding: 0 60px;
+  text-align: center;
+}
+.cube-picker-title {
+  color: @color0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.cube-picker-subtitle {
+  color: @color1;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 2px;
+}
+.cube-picker-content {
+  position: relative;
+  top: 20px;
+}
+.cube-picker-content > i {
+  height: 68px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translateZ(0);
+  width: @width0;
+  z-index: 10;
+}
+.cube-picker-content > .border-bottom-1px {
+  background: -webkit-linear-gradient(
+    bottom,
+    hsla(0, 0%, 100%, 0.4),
+    hsla(0, 0%, 100%, 0.8)
+  );
+  background: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0.4),
+    hsla(0, 0%, 100%, 0.8)
+  );
+  top: 0;
+}
+.cube-picker-content > .border-top-1px {
+  background: -webkit-linear-gradient(
+    top,
+    hsla(0, 0%, 100%, 0.4),
+    hsla(0, 0%, 100%, 0.8)
+  );
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.4),
+    hsla(0, 0%, 100%, 0.8)
+  );
+  bottom: 0;
+}
+.cube-picker-wheel-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 16px;
+}
+.cube-picker-wheel-wrapper > div {
+  flex-basis: 1e-9px;
+  flex: 1;
+  font-size: 20px;
+  height: 173px;
+  overflow: hidden;
+  width: 1%;
+}
+.cube-picker-wheel-scroll {
+  line-height: 36px;
+  list-style: none;
+  margin-top: 68px;
+  padding: 0;
+}
+.cube-picker-wheel-item {
+  color: @color0;
+  height: 36px;
+  list-style: none;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.cube-picker-footer {
+  height: 20px;
+}

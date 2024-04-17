@@ -1,0 +1,89 @@
+.page-markets-m {
+  position: relative;
+
+  > .head-bar {
+    font-size: 16px;
+    background-color: var(--bg-head-color);
+    .head {
+      position: relative;
+      .title {
+        text-align: center;
+        line-height: 40px;
+      }
+      i {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+      }
+    }
+    .action-menu {
+      position: relative;
+
+      margin: 0 8px;
+    }
+  }
+
+  > .body-bar {
+    background-color: var(--bg-card-color);
+    position: relative;
+    height: 100%;
+    dt {
+      position: relative;
+      font-size: 12px;
+      color: var(--color-gray);
+    }
+    dd {
+      position: relative;
+      height: auto;
+      p {
+        font-size: 18px;
+        border-bottom: 1px solid var(--border-color);
+        line-height: 62px;
+        height: 62px;
+        &:last-child {
+          border: 0;
+        }
+        span.pair {
+          margin: auto;
+          > div {
+            line-height: normal;
+          }
+          .name {
+            span + span {
+              margin-left: 4px;
+              color: var(--color-gray);
+              font-size: 13px;
+            }
+          }
+          .vol {
+            color: var(--color-gray);
+            font-size: 13px;
+          }
+        }
+        span.last {
+          margin: auto;
+          > div {
+            line-height: normal;
+          }
+          .fiat {
+            color: var(--color-gray);
+            font-size: 13px;
+          }
+        }
+        span.rate {
+          line-height: 62px;
+          > div {
+            display: inline-block;
+            border-radius: 2px;
+            text-align: center;
+            width: 82px;
+            height: 32px;
+            line-height: 32px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}

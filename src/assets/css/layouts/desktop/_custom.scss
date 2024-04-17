@@ -1,0 +1,123 @@
+li {
+  list-style-type: none;
+}
+
+input {
+  background: transparent;
+  border: 1px solid;
+}
+
+dt,
+dd p {
+  display: flex;
+  span {
+    flex: 1;
+  }
+}
+
+.ex_table {
+  dt {
+    line-height: 32px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    user-select: none;
+  }
+  dd {
+    position: absolute;
+    height: calc(100% - 32px);
+    overflow-y: auto;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    &.non-auth,
+    &.empty {
+      overflow-y: hidden;
+      > div {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        div {
+          &.first {
+            color: $value-color;
+            height: 18px;
+            line-height: 18px;
+            font-size: 14px;
+          }
+          &.second {
+            color: var(--color-gray);
+            line-height: 16px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    p {
+      padding-right: 11px;
+      padding-left: 16px;
+      line-height: 20px;
+      height: 20px;
+      &.new_order,
+      &.new_trade {
+        display: none;
+      }
+      &.order,
+      &.trade {
+        display: flex !important;
+      }
+    }
+  }
+  &.table_sorter {
+    dt {
+      span {
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        &.text-left span {
+          float: left !important;
+        }
+        span {
+          display: inline-block;
+        }
+        .sorter {
+          color: var(--color-gray);
+          position: relative;
+          font-size: 18px;
+          flex: 0 0 14px;
+          i {
+            position: absolute;
+            left: 50%;
+            transform: translateY(-50%);
+            &:first-child {
+              top: 14px;
+            }
+            &:last-child {
+              bottom: 3px;
+            }
+          }
+        }
+      }
+    }
+    p {
+      cursor: pointer;
+      transition: all 0.2s;
+      .name {
+        text-transform: uppercase;
+      }
+    }
+  }
+  &.table_noscroll {
+    dt {
+      position: relative;
+    }
+    dd {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}

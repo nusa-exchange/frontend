@@ -1,0 +1,23 @@
+.panel-view {
+  > .body-bar {
+    > .action {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      > button {
+        flex: 1;
+        height: 35px;
+        font-size: 14px;
+        margin-left: 10px;
+        background-color: var(--blue-color);
+        &:last-child {
+          margin-right: 10px;
+        }
+        &:disabled {
+          background-color: var(--disabled-color);
+        }
+      }
+    }
+  }
+}
